@@ -1,0 +1,25 @@
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    left: 0;
+    padding: 1rem;
+    border-bottom: 1px solid white;
+}
+
+nav img{
+    margin: 0;
+    padding: 0;
+    width: 3rem;
+}
+
+nav span {
+    margin: 0;
+    padding: 0;
+    color: #61DBFB;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-left: 1.5rem;
+}

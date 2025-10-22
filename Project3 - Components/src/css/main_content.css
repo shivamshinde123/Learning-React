@@ -1,0 +1,31 @@
+main {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.header-section {
+    font-size: 0.8rem;
+}
+
+.bullet-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Ensure the UL inside .bullet-section stacks its LI vertically (overrides any global rules) */
+.bullet-section ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* .bullet-section ul li {
+    display: list-item;
+} */

@@ -1,0 +1,21 @@
+
+header{
+ background: #F55A5A;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.globe-logo{
+    width: 1.5rem;
+    margin: 0 0.5rem;
+}
+
+.title {
+color: white;
+}
+
