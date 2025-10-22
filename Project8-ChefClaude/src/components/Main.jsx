@@ -1,11 +1,12 @@
+import { useState } from "react"
 
 
 
 export function Main() {
 
-    const ingredients = ["Chicken", "Carrot", "Potato", "Onion", "Garlic", "Salt", "Pepper"]
+    const [ingredients, setIngredients] = useState([])
 
-    const ingredientList = ingredients.map(
+    const ingredientsList = ingredients.map(
         (ingredient) => (
             <li key={ingredient}>{ingredient}</li>
         )
@@ -14,9 +15,11 @@ export function Main() {
     const handleAddIngredient = (e) => {
         e.preventDefault()
         const formData = new FormData(e.currentTarget)
-        const ingredient = formData.get('ingredient')
-        ingredients.push(ingredient)
-        console.log(ingredients)
+        const newIngredient = formData.get('ingredient')
+        
+        setIngredients((ingredients) => {
+            return [...ingredients, newIngredient]
+        })
     }
 
 
@@ -27,7 +30,7 @@ export function Main() {
                 <button type="submit" className="bg-black text-white px-10 py-2 ml-2 rounded-md hover:bg-[#141413] w-2xs cursor-pointer">+ Add Ingredient</button>
             </form>
             <ul className="flex flex-col gap-4 mt-10 justify-start items-center list-disc">
-                {ingredientList}
+                {ingredientsList}
             </ul>
         </main>
     )
