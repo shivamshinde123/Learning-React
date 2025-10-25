@@ -1,0 +1,19 @@
+
+
+
+
+
+
+.card .favorite {
+  width: 25px;
+  cursor: pointer;
+}
+
+.card .favorite-button {
+  border: none;
+  background: transparent;
+}
+
+.card .favorite-button:active {
+  transform: none;
+  box-shadow: none;

@@ -38,23 +38,11 @@ main {
   padding: 10px;
 }
 
-.card .favorite {
-  width: 25px;
-  cursor: pointer;
-}
-
 .card .contact {
   font-size: 0.75rem;
   color: gray;
   margin-block: 7px;
 }
 
-.card .favorite-button {
-  border: none;
-  background: transparent;
-}
 
-.card .favorite-button:active {
-  transform: none;
-  box-shadow: none;
 }
