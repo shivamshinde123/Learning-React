@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import Count from './Count.jsx'
+
 function App() {
   
   const [count, setCount] = useState(0)
@@ -30,7 +32,7 @@ function App() {
       <h1 className='text-3xl font-bold'>How many times will Bob say 'state' in this section?</h1>
       <div className='mt-10 flex flex-row gap-3'>
         <button className='border px-3 rounded-lg bg-black text-white border border-black hover:bg-white hover:text-black' onClick={handleDecrement}>-</button>
-        <h2 className='border p-5 rounded-full'>{count}</h2>
+        <Count number={count} />
         <button className='border px-3 rounded-lg bg-black text-white border border-black border border-black hover:bg-white hover:text-black' onClick={handleIncrement}>+</button>
       </div>
     </main>
