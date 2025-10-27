@@ -10,9 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@huggingface/inference": "^4.13.0",
     "@tailwindcss/vite": "^4.1.15",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-markdown": "^10.1.0",
     "tailwindcss": "^4.1.15"
   },
   "devDependencies": {

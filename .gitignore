@@ -50,3 +50,6 @@ eslintcache
 .yarn-integrity
 .next
 out
+
+#api keys
+.env.local

@@ -2,12 +2,12 @@
 
 
 
-const RecipeList = () => {
+const RecipeList = (props) => {
 
 
     return (
         <section>
-            {<h1>Recipe Shown here!</h1>}
+            {props.recipe}
         </section>
     )
 }
