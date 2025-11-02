@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import IngredientList from "./IngredientList.jsx"
 import RecipeList from './RecipeList.jsx'
 import AddIngredientForm from "./AddIngredientForm.jsx"
@@ -9,6 +9,13 @@ export default function Body() {
     const [ingredients, setIngredients] = useState([])
     const [recipeShown, setRecipeShown] = useState(false)
     const [recipe, setRecipe] = useState(null)
+    const recipeSection = useRef(null)
+
+    useEffect(() => { // scrolling to the get a recipe button whenever the recipe is loaded
+        if (recipe !== "" && recipeSection.current !== null){
+            recipeSection.current.scrollIntoView({behavior: "smooth"})
+        }
+    }, [recipe])
 
     const handleAddIngredient = (formData) => {
         const newIngredient = formData.get('ingredient')
@@ -33,7 +40,7 @@ export default function Body() {
     return (
         <main>
             <AddIngredientForm handleAddIngredient={handleAddIngredient} />
-            <IngredientList ingredients={ingredients} getRecipe={getRecipe} />
+            <IngredientList ingredients={ingredients} getRecipe={getRecipe} ref={recipeSection}/>
             {recipeShown && <RecipeList recipe={recipe}/>}
         </main>
     )

@@ -20,7 +20,7 @@ const IngredientList = (props) => {
             }
 
             {props.ingredients.length >= 5 &&
-                <div className="flex flex-col md:flex-row justify-center items-center gap-10 rounded-lg p-7 bg-[#F0EFEB] md:w-lg sm:w-md w-sm m-auto">
+                <div className="flex flex-col md:flex-row justify-center items-center gap-10 rounded-lg p-7 bg-[#F0EFEB] md:w-lg sm:w-md w-sm m-auto" ref={props.ref}>
                     <div>
                         <h3 className="mb-2 text-lg font-bold md:text-left text-center">Ready for a recipe?</h3>
                         <p>Generate a recipe from your list of ingredients</p>
